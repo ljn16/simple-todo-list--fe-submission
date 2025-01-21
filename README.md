@@ -1,6 +1,8 @@
 # Setup Intructions (front-end):
 Clone and open this repository
 
+![alt text](todo-app-view-1.png) ![alt text](todo-app-view-2.png) ![alt text](todo-app-view-3.png)
+
 (1) Spin up the back-end before completing the following front-end steps 
 
 (2) Install the dependancies 
