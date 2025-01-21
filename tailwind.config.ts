@@ -9,8 +9,10 @@ export default {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        // background: "var(--background)",
+        // foreground: "var(--foreground)",
+        blueTheme: '#386d9b',
+        grayCard: '#2d2d2d',
       },
     },
   },
