@@ -1,4 +1,4 @@
-### Setup Intructions (front-end):
+# Setup Intructions (front-end):
 ## Clone and open this repository
 
 (1) Spin up the back-end before completing the following front-end steps 
