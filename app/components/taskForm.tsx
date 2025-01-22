@@ -4,7 +4,7 @@ import ColorPicker from './colorPicker';
 
 interface TaskFormProps {
     title: string;
-    setTitleAction: (title: string) => void;
+    setTitleAction: (title: string) => void; 
     color: string;
     setColorAction: (color: string) => void;
     handleSubmitAction: (event: React.FormEvent<HTMLFormElement> | React.MouseEvent<HTMLButtonElement>) => void;
@@ -31,10 +31,10 @@ export default function TaskForm({
                 <div>
                     <label className='block font-semibold mb-1 text-blue-400'>Title</label>
                     <input className='rounded p-2 w-full bg-grayCard'
-                    type='text'
-                    value={title}
-                    onChange={(e) => setTitleAction(e.target.value)}
-                    placeholder={title ? '' : 'Enter task title'}
+                        type='text'
+                        value={title}
+                        onChange={(e) => setTitleAction(e.target.value)}
+                        placeholder={title ? '' : 'Enter task title'}
                     />
                 </div>
             </form>

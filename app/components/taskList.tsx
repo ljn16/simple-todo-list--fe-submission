@@ -50,7 +50,9 @@ export default function TaskList() {
         if (!confirm('Are you sure you want to delete this task?')) return;
 
         try {
-            await fetch(`http://localhost:4000/tasks/${id}`, { method: 'DELETE' });
+            await fetch(`http://localhost:4000/tasks/${id}`, { 
+                method: 'DELETE' 
+            });
             fetchTasks(); 
         } catch (error) {
             console.error(error);
@@ -75,23 +77,24 @@ export default function TaskList() {
 
         <div className='task-cards: space-y-2'>
             {tasks.map((task) => (
-            <div className='flex items-center justify-between p-4 rounded shadow bg-grayCard border-l-4' style={{ borderColor: task.color }}
-                key={task.id}
-            >
-                <div className='flex items-center space-x-2'>
-                    <input
-                        type='checkbox'
-                        checked={task.completed}
-                        onChange={() => handleToggleCompleted(task)}
-                    />
-                    <Link href={`/edit/${task.id}`} className='font-semibold hover:underline'>
-                        {task.title}
-                    </Link>
+                <div className='flex items-center justify-between p-4 rounded shadow bg-grayCard border-l-4' 
+                    style={{ borderColor: task.color }}
+                    key={task.id}
+                >
+                    <div className='flex items-center space-x-2'>
+                        <input
+                            type='checkbox'
+                            checked={task.completed}
+                            onChange={() => handleToggleCompleted(task)}
+                        />
+                        <Link href={`/edit/${task.id}`} className='font-semibold hover:underline'>
+                            {task.title}
+                        </Link>
+                    </div>
+                    <button className='bg-opacity-5 p-1 rounded-sm' onClick={() => handleDelete(task.id)}>
+                        &#128465;
+                    </button>
                 </div>
-                <button className='bg-opacity-5 p-1 rounded-sm' onClick={() => handleDelete(task.id)}>
-                    &#128465;
-                </button>
-            </div>
             ))}
         </div>
 
